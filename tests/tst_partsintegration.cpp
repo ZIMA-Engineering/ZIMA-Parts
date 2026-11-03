@@ -1368,7 +1368,7 @@ private slots:
     }
 #endif
 
-    void fileAndDirectoryIconsFollowSystem()
+    void proeIconsRemainDistinctAndOtherIconsFollowSystem()
     {
         QTemporaryDir directory;
         QVERIFY(directory.isValid());
@@ -1391,6 +1391,41 @@ private slots:
             QVERIFY(!expected.isNull());
             QCOMPARE(files.icon(info).pixmap(32, 32).toImage(), expected);
         }
+
+        struct ProeIconCase
+        {
+            QString name;
+            FileType::FileType type;
+            QString resource;
+        };
+        const QList<ProeIconCase> proeCases = {
+            {"part.prt.1", FileType::PROE_PRT, "prt_proe"},
+            {"part.PRT.42", FileType::PROE_PRT, "prt_proe"},
+            {"assembly.asm.2", FileType::PROE_ASM, "asm"},
+            {"drawing.drw.3", FileType::PROE_DRW, "drw"},
+            {"format.frm.4", FileType::FRM, "frm"},
+            {"neutral.neu.5", FileType::PROE_NEU, "neu_proe"}
+        };
+        QHash<int, QImage> proeImages;
+        for (const auto &iconCase : proeCases) {
+            QFile file(directory.filePath(iconCase.name));
+            QVERIFY(file.open(QIODevice::WriteOnly));
+            file.close();
+            const QFileInfo info(file.fileName());
+            QCOMPARE(FileMetadata(info).type, iconCase.type);
+            const auto actual = files.icon(info).pixmap(32, 32).toImage();
+            const auto expected = QIcon(QString(":/gfx/icons/%1.svg").arg(iconCase.resource))
+                                      .pixmap(32, 32).toImage();
+            QVERIFY(!actual.isNull());
+            QCOMPARE(actual, expected);
+            if (proeImages.contains(iconCase.type))
+                QCOMPARE(actual, proeImages.value(iconCase.type));
+            else
+                proeImages.insert(iconCase.type, actual);
+        }
+        QVERIFY(proeImages.value(FileType::PROE_PRT) != proeImages.value(FileType::PROE_ASM));
+        QVERIFY(proeImages.value(FileType::PROE_PRT) != proeImages.value(FileType::PROE_DRW));
+        QVERIFY(proeImages.value(FileType::PROE_ASM) != proeImages.value(FileType::PROE_DRW));
     }
 
 

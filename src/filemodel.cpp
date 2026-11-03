@@ -617,6 +617,19 @@ QIcon FileIconProvider::icon ( IconType type ) const
 
 QIcon FileIconProvider::icon ( const QFileInfo & info ) const
 {
+    if (info.isDir())
+        return QFileIconProvider::icon(info);
+    static const FileTypeList proeTypes = File::versionedTypes();
+    const auto fileType = FileMetadata(info).type;
+    if (proeTypes.contains(fileType))
+    {
+        const QString path = QString(":/gfx/icons/%1.svg")
+                                 .arg(File::getInternalNameForFileType(fileType));
+        auto found = m_proeIcons.constFind(path);
+        if (found == m_proeIcons.cend())
+            found = m_proeIcons.insert(path, QIcon(path));
+        return found.value();
+    }
     return QFileIconProvider::icon(info);
 }
 

@@ -1,5 +1,18 @@
 # Build verification
 
+## Distinct Pro/E file icons, November 3, 2026
+
+The Windows GUI, CLI, updater and integration projects passed a complete build
+with Qt 6.10.1, MSVC x64 and OCCT 8.0.1. All 64 integration checks, four
+read-only CLI checks, 14 built-in tool checks and translation validation passed.
+Focused coverage verifies exact distinct icons for numbered Pro/E Part,
+Assembly, Drawing, Format and Neutral files, including mixed-case and multiple
+numeric revisions. It also verifies unchanged native Windows folder, ZIMA-CAD,
+text and unknown-file icons. No user-visible text changed; translation catalogs
+remain unchanged. Clean tagged-source packaging and publication evidence belong
+to the [release record](releases/2026110301.md). Native Linux appearance was not
+tested on this Windows host.
+
 ## Signed standalone Linux 2026093001 (2026-09-30)
 
 The independently named ZIMA-Parts Linux release is signed, public and verified

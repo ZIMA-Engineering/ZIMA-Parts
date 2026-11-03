@@ -109,7 +109,7 @@ private slots:
     void updateThumbnails();
 };
 
-/*! Native platform file icons for the Parts list. */
+/*! Pro/E type icons with native platform fallback for the Parts list. */
 class FileIconProvider : public QFileIconProvider
 {
 public:
@@ -118,6 +118,8 @@ public:
     virtual QIcon   icon ( IconType type ) const;
     virtual QIcon   icon ( const QFileInfo & info ) const;
     virtual QString type ( const QFileInfo & info ) const;
+private:
+    mutable QHash<QString, QIcon> m_proeIcons;
 };
 
 #endif // FILEMODEL_H

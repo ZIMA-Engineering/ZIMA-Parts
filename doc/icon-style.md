@@ -8,19 +8,23 @@ built-in tools and metadata editing share this style.
 Run `python tools/generate-icons.py` to regenerate the vector assets. Resources
 are explicitly registered in `zima-parts.qrc`. Application-owned actions
 use these resources instead of platform-specific standard icons. The Parts file
-list uses Qt's native `QFileIconProvider` for each actual file.
+list uses the distinct application-owned icons for numbered Pro/E Part,
+Assembly, Drawing, Format and Neutral files. This applies to every numeric
+revision such as `.prt.1`, `.asm.2` and `.drw.10`. Other actual files use Qt's
+native `QFileIconProvider`.
 The directory Tree keeps custom datasource logos first, then requests the native
 folder icon. Windows uses its shell icons and registered file associations; Linux
 uses the desktop/platform icon provider and theme available to Qt. Unknown types
-receive the platform fallback. Numbered archive files use their actual filename,
-so their icon can differ from the original CAD file type.
+receive the platform fallback. Pro/E revision icons are independent of platform
+file associations so their document roles remain visually distinct.
 
 Application-owned action icons remain black and azure. Language flags, supplier
 logos, thumbnails and the current
 application identity are not action icons and retain their original appearance.
 
 This change does not change system widget styling, selection colors, command
-behavior, translations, file-type detection or persistent metadata. The
+behavior, translations, file-type detection or persistent metadata. No
+user-visible string changed, so the translation catalogs remain unchanged. The
 ZIMA-Parts name and ZP application mark are documented separately in the
 [branding transition](RENAME_REVIEW.md), starting with build 2026092902.
 
