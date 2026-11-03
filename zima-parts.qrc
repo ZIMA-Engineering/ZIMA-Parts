@@ -33,12 +33,14 @@
         <file>gfx/flags/ru.png</file>
         <file>gfx/navigation/pin.svg</file>
         <file>gfx/icons/asm.svg</file>
+        <file>gfx/icons/asm.png</file>
         <file>gfx/icons/blend.svg</file>
         <file>gfx/icons/catdrawing.svg</file>
         <file>gfx/icons/catpart.svg</file>
         <file>gfx/icons/catproduct.svg</file>
         <file>gfx/icons/dft.svg</file>
         <file>gfx/icons/drw.svg</file>
+        <file>gfx/icons/drw.png</file>
         <file>gfx/icons/dwg.svg</file>
         <file>gfx/icons/dxf.svg</file>
         <file>gfx/icons/frm.svg</file>
@@ -52,6 +54,7 @@
         <file>gfx/icons/step.svg</file>
         <file>gfx/icons/stl.svg</file>
         <file>gfx/icons/prt_proe.svg</file>
+        <file>gfx/icons/prt_proe.png</file>
         <file>gfx/icons/prt_nx.svg</file>
         <file>gfx/icons/neu_proe.svg</file>
         <file>gfx/icons/office-database.svg</file>

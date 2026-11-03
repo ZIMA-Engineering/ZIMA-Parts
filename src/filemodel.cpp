@@ -623,8 +623,12 @@ QIcon FileIconProvider::icon ( const QFileInfo & info ) const
     const auto fileType = FileMetadata(info).type;
     if (proeTypes.contains(fileType))
     {
-        const QString path = QString(":/gfx/icons/%1.svg")
-                                 .arg(File::getInternalNameForFileType(fileType));
+        const bool hasLegacyProeRoleIcon = fileType == FileType::PROE_PRT
+                                           || fileType == FileType::PROE_ASM
+                                           || fileType == FileType::PROE_DRW;
+        const QString path = QString(":/gfx/icons/%1.%2")
+                                 .arg(File::getInternalNameForFileType(fileType),
+                                      hasLegacyProeRoleIcon ? "png" : "svg");
         auto found = m_proeIcons.constFind(path);
         if (found == m_proeIcons.cend())
             found = m_proeIcons.insert(path, QIcon(path));

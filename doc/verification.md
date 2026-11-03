@@ -1,5 +1,19 @@
 # Build verification
 
+## Original Pro/E role icons, November 3, 2026
+
+The Windows GUI, CLI, updater and integration projects passed a complete local
+build with Qt 6.10.1, MSVC x64 and OCCT 8.0.1. Translation validation, four
+read-only CLI checks, 14 built-in tool checks and all 64 integration checks
+passed. Focused integration coverage verifies that mixed-case numbered Pro/E
+Part, Assembly and Drawing files use the exact original embedded PNG resources,
+that revisions share their role icon, and that the three roles remain distinct.
+Native folder and non-Pro/E file icon behavior remains covered. No user-visible
+text changed, so the translation catalogs remain unchanged. Clean tagged-source
+packaging and publication evidence belong to the
+[release record](releases/2026110302.md). Native Linux appearance was not tested
+on this Windows host.
+
 ## Distinct Pro/E file icons, November 3, 2026
 
 The Windows GUI, CLI, updater and integration projects passed a complete build
