@@ -1,0 +1,41 @@
+{
+  "version": "2026110301",
+  "tag": "ZIMA-Parts-2026110301",
+  "commit": "64a93cd6627bf4c47c0c975d3310c107a13520f0",
+  "publishedAt": "2026-11-03T20:43:15Z",
+  "releaseUrl": "https://github.com/ZIMA-Engineering/ZIMA-Parts/releases/tag/ZIMA-Parts-2026110301",
+  "latest": true,
+  "immutable": true,
+  "signedAcceptance": {
+    "fileChecksums": 1565,
+    "sourceFiles": 647,
+    "bootstrapTrusted": true,
+    "cleanPathProbes": true
+  },
+  "publicDownloads": {
+    "ZIMA-Parts-2026110301.zip": {
+      "bytes": 317069692,
+      "sha256": "2e9bf4f677cfa8586af52c17281df925db1aa3b2c7168deadd34245ac333b5d1"
+    },
+    "update-manifest.json": {
+      "bytes": 705,
+      "sha256": "921259e430665c53f02fccdf0fef70efb1cc73ef7bd494d85425dd5bf449d85a"
+    },
+    "update-manifest.sig": {
+      "bytes": 176,
+      "sha256": "c21270f34d6e8e5cd7efdf233cb574449ba779676043367777207ecf2b7c19d1"
+    }
+  },
+  "updater": {
+    "installedVersion": "2026092905",
+    "trusted": true,
+    "availableVersion": "2026110301",
+    "installable": true,
+    "downloadPerformed": false,
+    "installationPerformed": false,
+    "rootFilesUnchanged": true
+  },
+  "platformGaps": [
+    "Native Linux build and icon appearance were not repeated on the Windows host."
+  ]
+}

@@ -9,9 +9,18 @@ Focused coverage verifies exact distinct icons for numbered Pro/E Part,
 Assembly, Drawing, Format and Neutral files, including mixed-case and multiple
 numeric revisions. It also verifies unchanged native Windows folder, ZIMA-CAD,
 text and unknown-file icons. No user-visible text changed; translation catalogs
-remain unchanged. Clean tagged-source packaging and publication evidence belong
-to the [release record](releases/2026110301.md). Native Linux appearance was not
-tested on this Windows host.
+remain unchanged.
+
+The clean tagged-source build, signed package and public release passed. The
+317,069,692-byte archive contains 1,565 verified files plus its checksum index
+and 647 exact committed-source files. Ed25519, ZIP CRC, complete checksums,
+binary identity, bootstrap trust and clean-PATH probes passed. All three assets
+matched their complete SHA-256 digests after anonymous download. The immutable
+release is latest, and the trusted 2026092905 Windows updater offers 2026110301
+without downloading, installing or modifying its existing root. Exact evidence
+is in the [release record](releases/2026110301.md) and
+[publication receipt](releases/2026110301-publication.json). Native Linux
+appearance was not tested on this Windows host.
 
 ## Signed standalone Linux 2026093001 (2026-09-30)
 
