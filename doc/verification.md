@@ -1,5 +1,14 @@
 # Build verification
 
+## Signed Linux 2026110501 (2026-11-05)
+
+The current sources passed GUI, CLI and updater builds on Debian 13.6 x86_64.
+Development and packaged runs each passed 64 integration checks and 18 CLI/tool
+checks. All 18 updater fixtures, four distribution checks (one Windows-only
+skip), translation checks and native packaged startup passed. Production-key
+signatures, archive/source inventories and relocated bootstrap trust passed.
+See [the release record](releases/2026110501.md) for hashes and acceptance scope.
+
 ## Original Pro/E role icons, November 3, 2026
 
 The Windows GUI, CLI, updater and integration projects passed a complete local
