@@ -1,0 +1,44 @@
+{
+  "tag": "ZIMA-Parts-2026110501",
+  "url": "https://github.com/ZIMA-Engineering/ZIMA-Parts/releases/tag/ZIMA-Parts-2026110501",
+  "publishedAt": "2026-11-05T00:44:47Z",
+  "draft": false,
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "size": 265,
+      "digest": "sha256:697dd6576b8c75e967dca59a242b00d872b85a5c0122d0c9f2b00370a30535d7",
+      "state": "uploaded"
+    },
+    {
+      "name": "update-manifest.json",
+      "size": 717,
+      "digest": "sha256:912fd9e24c61c78f6c85849a51d4118b3a856d15df6abac5e28cb6e08f0bbdf0",
+      "state": "uploaded"
+    },
+    {
+      "name": "update-manifest.sig",
+      "size": 176,
+      "digest": "sha256:6ccd807ec11124d733a342fd9a41757e50098e962a71de216c093889a34e0ac1",
+      "state": "uploaded"
+    },
+    {
+      "name": "validation.json",
+      "size": 899,
+      "digest": "sha256:a43fee9407fca44fac776ec3c133107302e1ff18cafcc06f54a076989556858b",
+      "state": "uploaded"
+    },
+    {
+      "name": "ZIMA-Parts-2026110501.zip",
+      "size": 242003212,
+      "digest": "sha256:d824eef9d918ca8eca47676fcc157b45e7ece51f24a3364a5184e0daed2886d5",
+      "state": "uploaded"
+    }
+  ],
+  "productionDiscovery": {
+    "event": "result",
+    "installedVersion": "2026110501",
+    "schemaVersion": 1,
+    "status": "current"
+  }
+}
